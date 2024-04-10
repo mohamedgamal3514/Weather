@@ -1,0 +1,107 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #1e202b;
+  --primary-color: #bfc1c8;
+  --secondary-color: #009ad8;
+}
+
+/* ---------General Style---------- */
+a {
+  text-decoration: none;
+  color: var(--primary-color) !important;
+}
+
+::placeholder {
+  color: var(--primary-color) !important;
+}
+
+/* ---------Start Navbar Style---------- */
+header .navbar {
+  background-color: var(--bg-color);
+}
+
+header .navbar-toggler:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+header .navbar-nav .nav-link {
+  border-bottom: solid 1px var(--primary-color);
+}
+
+header nav ul {
+  background-color: #262936;
+  border-radius: 0.4rem;
+}
+
+/* ---------End Navbar Style---------- */
+
+/* ---------Start Main Section---------- */
+main {
+  background-image: linear-gradient(to bottom, #00000070, #00000070), url("../images/bg.webp");
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+main .btn,
+footer .btn {
+  background-color: var(--secondary-color) !important;
+  border-color: transparent;
+}
+
+main .btn:hover {
+  border-color: transparent !important;
+}
+
+main .form-control,
+footer .form-control {
+  background-color: #262936 !important;
+}
+
+.item {
+  color: var(--primary-color);
+  background-color: #323544;
+}
+
+.special_item {
+  color: var(--primary-color);
+  background-color: #262936;
+}
+
+/* ---------End Main Section---------- */
+
+/* ---------Start Footer ---------- */
+footer {
+  background-color: #262936;
+}
+
+.social_icons a {
+  width: 40px;
+  height: 40px;
+  background-color: #1e202b;
+  transition: all 0.3s;
+}
+
+.social_icons a i {
+  color: var(--secondary-color);
+  transition: all 0.3s;
+
+}
+
+.social_icons a:hover {
+  background-color: var(--secondary-color);
+}
+
+.social_icons a:hover i {
+  color: var(--bg-color);
+}
+
+/* ---------End Footer ---------- */

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <!-- -----------link font Awesome-------------- -->
+     <link rel="stylesheet" href="./css/all.min.css" />
+     <!-- -----------link google fonts-------------- -->
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+     <!-- -----------link Bootstrap css-------------- -->
+     <link rel="stylesheet" href="./css/bootstrap.min.css" />
+     <!-- -----------link css-------------- -->
+     <link rel="stylesheet" href="./css/main.css" />
+     <!-- -----------link css media-------------- -->
+     <link rel="stylesheet" href="./css/media.css" />
+     <title>Weather App</title>
+</head>
+
+<body>
+     <!-- Start Header Navbar -->
+     <header>
+          <nav class="navbar navbar-expand-lg py-4">
+               <div class="container">
+                    <a class="navbar-brand d-flex align-items-center" href="index.html">
+                         <img src="./images/logo@2x.png" class="w-25 me-3" alt="" />
+                         <div>
+                              <h1 class="h4 m-0">Weather</h1>
+                              <span class="d-block h6">tagline goes here</span>
+                         </div>
+                    </a>
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                         aria-expanded="false" aria-label="Toggle navigation">
+                         <span class=""><i class="fa-solid fa-bars text-white fs-4"></i></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+                              <li class="nav-item">
+                                   <a class="nav-link active_link py-3 py-lg-0" aria-current="page" href="#">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                   <a class="nav-link px-lg-4 py-3 py-lg-0" href="#news">News</a>
+                              </li>
+                              <li class="nav-item">
+                                   <a class="nav-link px-lg-4 py-3 py-lg-0" href="#cameras">Live Cameras</a>
+                              </li>
+                              <li class="nav-item">
+                                   <a class="nav-link px-lg-4 py-3 py-lg-0" href="#photos">Photos</a>
+                              </li>
+                              <li class="nav-item">
+                                   <a class="nav-link px-lg-4 border-bottom-0 py-3 py-lg-0" href="#contact">Contact</a>
+                              </li>
+                         </ul>
+                    </div>
+               </div>
+          </nav>
+     </header>
+     <!-- End Header Navbar -->
+     <!-- Start Main Section  -->
+     <main class="py-5">
+          <div class="container py-3">
+               <div class="search_area position-relative py-5">
+                    <input type="text" id="searchInput" placeholder="Type Your Location"
+                         class="form-control text-white p-3 border-0" />
+                    <button
+                         class="btn btn-primary position-absolute end-0 px-4 rounded-5 top-50 me-1 translate-middle-y">Find
+                    </button>
+               </div>
+               <div class="row">
+                    <div class="col-lg-4 day_card p-3" id="currentDay">
+                         <div class="item rounded-2 shadow-lg p-3">
+                              <div id="date" class="d-flex justify-content-between">
+                                   <div class="day">
+                                        <span id="currentDayName"></span>
+                                   </div>
+                                   <div class="full_date">
+                                        <span id="currentDate"></span>
+                                   </div>
+                              </div>
+                              <div class="my-3 text-center">
+                                   <span class="fs-1 text-white" id="cityName"></span>
+                              </div>
+                              <div id="temp" class="my-3 d-flex align-items-center justify-content-between">
+                                   <span class="fs-1 text-white fw-bolder" id="cDegree"></span>
+                                   <img id="caseImage" src="" alt="" class="w-25">
+                              </div>
+                              <p class="case text-primary" id="dayCondition"></p>
+                              <div class="d-flex justify-content-between align-items-center">
+                                   <div class="humidity">
+                                        <img src="./images/icon-umberella.png" alt="" class="me-1">
+                                        <span id="cHumidity"></span>
+                                   </div>
+                                   <div class="wind_speed">
+                                        <img src="./images/icon-wind.png" alt="" class="me-1">
+                                        <span id="windSpeed"></span>
+                                   </div>
+                                   <div class="wind_dir">
+                                        <img src="./images/icon-compass.png" alt="" class="me-1">
+                                        <span id="windDir"></span>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-lg-4 day_card p-3">
+                         <div class="special_item rounded-2 shadow-lg p-3">
+                              <div id="date">
+                                   <div class="day text-center" id="nextDayName"></div>
+                              </div>
+                              <div id="temp" class="my-3 d-flex align-items-center justify-content-between flex-column">
+                                   <span class="fs-1 text-white fw-bolder my-3" id="nextDay"></span>
+                                   <img src="" alt="" class="w-25 mb-1" id="nextDayCondIcon">
+                              </div>
+                              <p class="case text-primary text-center pb-2" id="nextDayCondition"></p>
+                         </div>
+                    </div>
+
+                    <div class="col-lg-4 day_card p-3">
+                         <div class="item rounded-2 shadow-lg p-3">
+                              <div id="date">
+                                   <div class="day text-center" id="thidDayName"></div>
+                              </div>
+                              <div id="temp" class="my-3 d-flex align-items-center justify-content-between flex-column">
+                                   <span class="fs-1 text-white fw-bolder my-3" id="thirdDayDegree"></span>
+                                   <img src="" alt="" class="w-25 mb-1" id="thirdConditionIcon">
+                              </div>
+                              <p class="case text-primary text-center pb-2" id="thirdConditionText"></p>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </main>
+     <!-- End Main Section  -->
+     <!-- Start Footer Section  -->
+     <footer class="py-5">
+          <div class="container py-5">
+               <div class="d-flex justify-content-between align-items-center p-4">
+                    <div class="input-group w-50">
+                         <input type="text" class="form-control border-dark" placeholder="Enter Your Email To Subscribe"
+                              aria-label="Recipient's username" aria-describedby="button-addon2">
+                         <button class="btn btn-primary" type="button" id="button-addon2">Subscribe</button>
+                    </div>
+                    <div class="w-25 social_icons d-flex justify-content-center align-items-center">
+                         <a href="" class=" rounded-circle d-flex justify-content-center align-items-center me-2">
+                              <i class="fa-brands fa-facebook-f fs-5 "></i>
+                         </a>
+                         <a href="" class=" rounded-circle d-flex justify-content-center align-items-center me-2">
+                              <i class="fa-brands fa-twitter fs-5 "></i>
+                         </a>
+                         <a href="" class=" rounded-circle d-flex justify-content-center align-items-center me-2">
+                              <i class="fa-brands fa-google-plus-g fs-5 "></i>
+                         </a>
+                         <a href="" class=" rounded-circle d-flex justify-content-center align-items-center me-2">
+                              <i class="fa-brands fa-pinterest-p fs-5 "></i>
+                         </a>
+                    </div>
+               </div>
+          </div>
+          <p class="text-center my-5 p-2 text-white">Copyright 2014 Company name. Designed by Themezy. All rights
+               reserved</p>
+     </footer>
+     <!-- Start Footer Section  -->
+     <!-- -----------link Bootstrap JS-------------- -->
+     <script src="./js/bootstrap.bundle.js"></script>
+     <!-- -----------link JS-------------- -->
+     <script src="./js/index.js"></script>
+</body>
+
+</html>

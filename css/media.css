@@ -1,0 +1,18 @@
+/* ----------large secreen---------- */
+@media (min-width: 992px) {
+    header .navbar-nav .nav-link {
+        border-bottom-color: transparent;
+    }
+
+    .active_link {
+        border: var(--secondary-color) 1px solid !important;
+        border-radius: 0.9rem;
+        padding: 0.8rem;
+        color: var(--secondary-color) !important;
+    }
+
+    header nav ul {
+        background-color: transparent;
+        border-radius: 0;
+    }
+}
